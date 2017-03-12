@@ -1,6 +1,10 @@
 # coding:utf-8
+# https://github.com/1oid/WebQQ-Robot-by-Plugin.git
 from startConf import *
-import requests,urllib,sys
+import requests
+import urllib
+import sys
+
 from lib.functions import *
 sys.path.append("plugins")
 plugins = load_Plugins()
