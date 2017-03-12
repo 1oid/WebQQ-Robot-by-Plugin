@@ -93,11 +93,14 @@ def get_polls(data,headers,cookies):
             continue
         except TypeError,e:
             print e
-            send_to_group(int(group_uin), content=urllib.quote("Type Error!"))
+            # 这个send是为了提示一些报错,你可以将前面的#去掉 下面也是相同
+            #send_to_group(int(group_uin), content=urllib.quote("Type Error!"))
+            continue
         except ValueError,e:
             print e
-            send_to_group(int(group_uin), content=urllib.quote(u"数据传输错误,请联系管理员帮忙查看/修复.".encode("utf-8")))
+            #send_to_group(int(group_uin), content=urllib.quote(u"数据传输错误,请联系管理员帮忙查看/修复.".encode("utf-8")))
             continue
         except IndexError,e:
             print e
-            send_to_group(int(group_uin), content=urllib.quote("No msg!"))
+            #send_to_group(int(group_uin), content=urllib.quote("No msg!"))
+            continue
