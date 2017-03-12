@@ -12,6 +12,4 @@ class Plugin:
     # 发送过来的指令  help
     def _cmd(self):
         if self.command[:4] == 'help':
-            # 分割提取ip
-            ip = self.command.split(":")[0]
             return self.usage
